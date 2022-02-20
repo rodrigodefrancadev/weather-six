@@ -1,21 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { citiesWithCountriesArray } from '../../../types/enums/AvailableCities';
+import './HomeScreen.scss';
+import _ from 'lodash';
 
+const citiesRows = _.chunk(citiesWithCountriesArray, 3);
 
 const HomeScreen: React.FC = () => {
-    return (<>
-        <div>HomeSreen</div>
-        <ul>
-            {citiesWithCountriesArray.map(({city}) => (
-                <li key={city}>
-                    <Link to={`/${city}`}>
-                        {city}
-                    </Link>
-                </li>   
+    return (<div className='home-screen-container'>
+        <div className='title'>Weather</div>
+        <div className='subtitle'>select a city</div>
+        <img className='world-icon' src="/img/world-icon.png" alt="word-icon" />
+        <div className='cities-container'>
+            {citiesRows.map((row) => (
+                <div className='city-row'>
+                    {row.map(({city}) => (
+                        <div key={city}>
+                            <Link to={`/${city}`} className='city-link'>
+                                {city}
+                            </Link>
+                        </div>
+                    ))}
+                </div>
             ))}
-        </ul>
-    </>);
+        </div>
+    </div>);
 };
 
 export default HomeScreen;

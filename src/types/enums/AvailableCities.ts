@@ -8,10 +8,6 @@ enum AvailableCities {
 }
 
 export const citiesWithCountry: Record<AvailableCities, {city: string, country: string}> = {
-    [AvailableCities.LONDON_GB]: {
-        city: "London",
-        country: "GB"
-    },
     [AvailableCities.DALLOL_NG]: {
         city: "Dallol",
         country: "NG"
@@ -19,6 +15,10 @@ export const citiesWithCountry: Record<AvailableCities, {city: string, country: 
     [AvailableCities.FAIRBANKS_US]: {
         city: "Fairbanks",
         country: "US"
+    },
+    [AvailableCities.LONDON_GB]: {
+        city: "London",
+        country: "GB"
     },
     [AvailableCities.RECIFE_BR]: {
         city: "Recife",
