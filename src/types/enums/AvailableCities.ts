@@ -7,7 +7,7 @@ enum AvailableCities {
     YAKUTSK_RU = "Yakutsk"
 }
 
-export const CitiesWithCountry: Record<AvailableCities, {city: string, country: string}> = {
+export const citiesWithCountry: Record<AvailableCities, {city: string, country: string}> = {
     [AvailableCities.LONDON_GB]: {
         city: "London",
         country: "GB"
@@ -32,6 +32,11 @@ export const CitiesWithCountry: Record<AvailableCities, {city: string, country: 
         city: "Yakutsk",
         country: "RU"
     },
-}
+};
+
+export const citiesWithCountriesArray = Object.keys(citiesWithCountry).map(cityName => {
+    const _cityName = cityName as any as AvailableCities;
+    return citiesWithCountry[_cityName];
+});
 
 export default AvailableCities;
