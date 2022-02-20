@@ -10,14 +10,6 @@ const CityWeatherScreen: React.FC = () => {
     
     return (<>
         <Link to='/'>Voltar</Link>
-        <div>CityWeatherScreen</div>
-        <p><strong>City Name:</strong> {routeParams.city}</p>
-        <p><strong>Loading:</strong> {loading.toString()}</p>
-        <p><strong>Error:</strong> {JSON.stringify(error)}</p>
-        <p><strong>Data:</strong></p>
-        <pre>
-{JSON.stringify(data, null, 4)}
-        </pre>
     </>);
 };
 
