@@ -39,4 +39,8 @@ export const citiesWithCountriesArray = Object.keys(citiesWithCountry).map(cityN
     return citiesWithCountry[_cityName];
 });
 
+export function isCityAvailable(city: string): boolean {
+    return citiesWithCountriesArray.map(x => x.city).includes(city);
+}
+
 export default AvailableCities;
