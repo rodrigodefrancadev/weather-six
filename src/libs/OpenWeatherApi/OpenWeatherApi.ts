@@ -7,7 +7,7 @@ export default class OpenWeatherApi {
 
     public async getWeatherByCityName(cityName: string): Promise<OpenWeatherApiData> {
         const url = `http://api.openweathermap.org/data/2.5/weather?units=metric&q=${cityName}&appid=${this.apiKey}`;
-        const response = await fetch(url, {method: "GET", });
+        const response = await fetch(url, {method: "GET" });
 
         if (response.status === 200) {
             const weather: OpenWeatherApiData = await response.json();
