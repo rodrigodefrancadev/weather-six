@@ -1,6 +1,11 @@
 {
   "name": "weather-six",
   "version": "0.1.0",
+  "author": {
+    "name": "Rodrigo Menezes",
+    "email": "rodrigo.fsamenezes@gmail.com",
+    "url": "https://www.linkedin.com/in/rodrigo-menezes-6485bb167"
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",

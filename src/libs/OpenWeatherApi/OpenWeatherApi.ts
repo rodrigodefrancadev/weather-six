@@ -9,7 +9,7 @@ export default class OpenWeatherApi {
     }
 
     public async getOneCallApi(latLon: LatLon): Promise<OneCallApiData> {
-        const url = `http://api.openweathermap.org/data/2.5/onecall?units=metric&lat=${latLon.lat}&lon=${latLon.lon}&exclude=minutely,daily,alerts&appid=${this.apiKey}`;
+        const url = `https://api.openweathermap.org/data/2.5/onecall?units=metric&lat=${latLon.lat}&lon=${latLon.lon}&exclude=minutely,daily,alerts&appid=${this.apiKey}`;
         const response = await fetch(url, {method: "GET" });
 
         if (response.status === 200) {
@@ -22,7 +22,7 @@ export default class OpenWeatherApi {
     }
 
     public async getWeatherByCityName(cityName: string): Promise<WeatherData> {
-        const url = `http://api.openweathermap.org/data/2.5/weather?units=metric&q=${cityName}&appid=${this.apiKey}`;
+        const url = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${cityName}&appid=${this.apiKey}`;
         const response = await fetch(url, {method: "GET" });
 
         if (response.status === 200) {
