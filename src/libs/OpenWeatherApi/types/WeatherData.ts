@@ -1,4 +1,4 @@
-export default interface OpenWeatherApiData {
+export default interface WeatherData {
     id: number; // city id
     timezone: number; // seconds
     name: string; // city name

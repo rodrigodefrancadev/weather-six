@@ -1,0 +1,17 @@
+.city-weather-screen-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+
+    .go-to-back-button {
+        margin: 1.6rem;
+        a {
+            font-size: 1.2rem;
+            color: white;
+            svg {
+                transform: scaleX(1.15);
+            }
+        }
+    }
+}
